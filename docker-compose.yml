@@ -7,7 +7,7 @@ services:
       context: ./images/postgresql
       dockerfile: postgresql.Dockerfile
     ports: 
-      - "5433:5432"
+      - "5432:5432"
     volumes: 
       - ./images/postgresql/data:/var/lib/postgresql/data
     environment: 
@@ -21,8 +21,8 @@ services:
       context: ./images/mosquitto
       dockerfile: mosquitto.Dockerfile
     ports: 
-      - "1884:1883"
-      - "8081:8080"
+      - "1883:1883"
+      - "8080:8080"
     volumes: 
       - ./images/mosquitto/plugins:/mosquitto/plugins
       - ./images/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
